@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <input type="username" placeholder="Enter Username :" id="uname"><br><br>
+    <input type="password" placeholder="Enter Password:" id="pass"><br><br>
+    <button type="button" onclick="login()">login</button>
+    <h1 id="msg"></h1>
+    <script>
+        function login(){
+            alert("plese enter value")
+            var uname = document.getElementById("uname").value;
+            var pass = document.getElementById("pass").value;
+            var h1ele = document.getElementById("msg")
+            if(uname==""){
+                h1ele.innerHTML="Username cannnot be empty"
+                return
+            }            
+            if(pass ==""){
+                h1ele.innerHTML="password is neccessary";
+            }
+            else if(uname=="Sanskriti Dubey" && pass=="1234"){
+                h1ele.innerHTML="Login Successful"
+            }
+            else{
+                h1ele.innerHTML="Login Fail"
+            }
+        }      
+    </script>
+</body>
+</html>
