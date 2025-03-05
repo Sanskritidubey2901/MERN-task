@@ -4,51 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
+    <style> 
+          .animate-gradient {
+            background-size: 300%;
+            -webkit-animation: animatedgradient 9s ease infinite alternate;
+            -moz-animation: animatedgradient 9s ease infinite alternate;
+            animation: animatedgradient 9s ease infinite alternate;
+        }
+        @keyframes animatedgradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-black"> 
     <!-- Navigation Bar -->
-    <nav class="p-6 bg-gray-800">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <nav class=" p-2 pl-0.5 pr-0.5 bg-black">
+        <div class=" ml-1 mr-1 flex justify-between">
             <div class="text-2xl font-semibold text-white">
-                <a href="#">Sanskriti Dubey</a>
+                <a href="#">SANSKRITI DUBEY</a>
             </div>
             <div class="space-x-6">
-                <ul class="flex space-x-4">
-                    <li><a href="#home" class="hover:text-gray-400">Home</a></li>
-                    <li><a href="#projects" class="hover:text-gray-400">Projects</a></li>
-                    <li><a href="#about" class="hover:text-gray-400">About</a></li>
-                    <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
+                <ul class="flex space-x-2 justify-end text-1xl text-gray-400">
+                    <li><a href="#home" class="hover:text-white">Home</a></li>
+                    <li><a href="#projects" class="hover:text-white">Projects</a></li>
+                    <li><a href="#about" class="hover:text-white">About</a></li>
+                    <li><a href="#contact" class="hover:text-white">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-center py-24" id="hero">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex"  >
-                <div>
-<img src="image.jpg " alt="pic" height="300px">
-                </div>
-                <div>
-                    <h1 class="text-5xl font-extrabold text-white">Hello, Its Me Sanskriti Dubey</h1>
-                    <p class="mt-4 text-xl text-white">A passionate web developer & Data Analyst</p>
-                    <a href="#projects" class="mt-6 inline-block bg-indigo-600 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-indigo-700">View My Work</a>
-                </div>
-            
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-gray-800">
-        <div class="max-w-7xl mx-auto text-center px-6">
-            <h2 class="text-4xl font-extrabold text-white">About Me</h2>
-            <p class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">A motivated and dedicated Computer Science graduate with a strong foundation in software development, algorithms, and problem-solving. Eager to contribute to an innovative and challenging work environment while continually improving skills and gaining experience in the field of technology.</p>
-        </div>
+        <!-- Hero Section -->
+    <section class="pt-0 text-center py-24" id="hero">
+       <div class="w-auto h-screen bg-no-repeat  bg-contain bg-scroll"
+       style="background-image: url(image2.jpg);">
+           <div class="h-20">
+           
+       </div>
+       <div class="justify-items-center ml-2 pt-60  ">
+        <h1 class=" animate-gradient text-5xl font-extrabold text-transparent bg-gradient-to-r
+                    from-purple-700 via-blue-500
+to-pink-400 bg-clip-text" >Hello, Its Me Sanskriti Dubey</h1>
+        <p class="mt-4 text-xl text-white">A passionate web developer & Data Analyst</p>
+          
+        <a href="#projects" class=" mt-6 inline-block bg-indigo-600 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-indigo-700">View My Work</a>
+       </div> 
+       </div>
+        
     </section>
+    <!-- Projects Section --> 
+     <section id="projects" class=" h-screen py-24">
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-gray-900">
         <div class="max-w-7xl mx-auto text-center px-6">
             <h2 class="text-4xl font-extrabold text-white">My Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
@@ -68,67 +83,70 @@
                     <a href="#" class="text-indigo-500 mt-4 block">See More</a>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Task Section -->
-    <section id="Task" class="py-24 bg-gray-900">
-        <div class="max-w-7xl mx-auto text-center px-6">
-            <h2 class="text-4xl font-extrabold text-white">Task Performed</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <h3 class="text-xl font-semibold text-white">Task 1</h3>
-                    <p class="text-gray-400 mt-2">Banner Making</p>
-                    <a href="#" class="text-indigo-500 mt-4 block">See More</a>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <h3 class="text-xl font-semibold text-white">Task 2</h3>
-                    <p class="text-gray-400 mt-2">Parlee Technology site designing</p>
-                    <a href="#" class="text-indigo-500 mt-4 block">See More</a>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <h3 class="text-xl font-semibold text-white">Task 3</h3>
-                    <p class="text-gray-400 mt-2">Calculator Making</p>
-                    <a href="#" class="text-indigo-500 mt-4 block">See More</a>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <h3 class="text-xl font-semibold text-white">Task 4</h3>
-                    <p class="text-gray-400 mt-2">Login Page Designing</p>
-                    <a href="#" class="text-indigo-500 mt-4 block">See More</a>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-                    <h3 class="text-xl font-semibold text-white">Task 5</h3>
-                    <p class="text-gray-400 mt-2">Javascript: List</p>
-                    <a href="#" class="text-indigo-500 mt-4 block">See More</a>
-                </div>
+        </div>    
+     </section>
+  <!-- Task Section -->
+  <section id="Task" class="py-24 bg-gray-900">
+    <div class="max-w-7xl mx-auto text-center px-6">
+        <h2 class="text-4xl font-extrabold text-white">Task Performed</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
+            <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h3 class="text-xl font-semibold text-white">Task 1</h3>
+                <p class="text-gray-400 mt-2">Banner Making</p>
+                <a href="#" class="text-indigo-500 mt-4 block">See More</a>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h3 class="text-xl font-semibold text-white">Task 2</h3>
+                <p class="text-gray-400 mt-2">Parlee Technology site designing</p>
+                <a href="#" class="text-indigo-500 mt-4 block">See More</a>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h3 class="text-xl font-semibold text-white">Task 3</h3>
+                <p class="text-gray-400 mt-2">Calculator Making</p>
+                <a href="#" class="text-indigo-500 mt-4 block">See More</a>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h3 class="text-xl font-semibold text-white">Task 4</h3>
+                <p class="text-gray-400 mt-2">Login Page Designing</p>
+                <a href="#" class="text-indigo-500 mt-4 block">See More</a>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h3 class="text-xl font-semibold text-white">Task 5</h3>
+                <p class="text-gray-400 mt-2">Javascript: List</p>
+                <a href="#" class="text-indigo-500 mt-4 block">See More</a>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-gray-800">
-        <div class="max-w-7xl mx-auto text-center px-6">
-            <h2 class="text-4xl font-extrabold text-white">Contact Me</h2>
-            <p class="mt-6 text-lg text-gray-400">Feel free to reach out if you have any questions or project inquiries. I'd love to hear from you!</p>
-            <div class="mt-8">
-                <a href="mailto:yourname@example.com" class="bg-indigo-600 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-indigo-700">Email Me</a>
-            </div>
+    </div>
+</section>           
+ <!-- Contact Section -->
+ <section id="contact" class="py-24 bg-gray-800">
+    <div class="max-w-7xl mx-auto text-center px-6">
+        <h2 class="text-4xl font-extrabold text-white">Contact Me</h2>
+        <p class="mt-6 text-lg text-gray-400">Feel free to reach out if you have any questions or project inquiries. I'd love to hear from you!</p>
+        <div class="mt-8">
+            <a href="mailto:yourname@example.com" class="bg-indigo-600 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-indigo-700">Email Me</a>
         </div>
-    </section>
-    <!--For Further Details Contact-->
-    <section id="contact" class="bg-purple-400">
-        <h1 class="text-3xl font-bold mb-4">For Further Details Contact</h1>
-        <form>
-            <input type="text" placeholder="Name" class="w-full p-2 mb-2 border border-gray-300">
-            <input type="email" placeholder="Email" class="w-full p-2 mb-2 border  border-gray-300">
-            <textarea placeholder="Message" class="w-full p-2 mb-2 border border-gray-300"></textarea>
-            <button class="bg-gray-900 text-white p-2 rounded">Send</button>
-        </form>
-    </section>
+    </div>
+</section>
+<!--For Further Details Contact-->
+<section id="contact" class="bg-purple-400">
+    <h1 class="text-3xl font-bold mb-4">For Further Details Contact</h1>
+    <form>
+        <input type="text" placeholder="Name" class="w-full p-2 mb-2 border border-gray-300">
+        <input type="email" placeholder="Email" class="w-full p-2 mb-2 border  border-gray-300">
+        <textarea placeholder="Message" class="w-full p-2 mb-2 border border-gray-300"></textarea>
+        <button class="bg-gray-900 text-white p-2 rounded">Send</button>
+    </form>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-6 text-center text-gray-400">
-        <p>© 2025 Sanskriti Dubey All rights reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer class="bg-gray-900 py-6 text-center text-gray-400">
+    <p>© 2025 Sanskriti Dubey All rights reserved.</p>
+</footer>
 
 </body>
 </html>
+
+        
+    
+</body>
